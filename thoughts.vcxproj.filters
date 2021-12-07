@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="NoteManager">
+      <UniqueIdentifier>{4fa29090-cdeb-45e9-96d0-a75f80354449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Syncer">
+      <UniqueIdentifier>{2f0a12b7-3b6e-4ad6-90e0-7546eb99b289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{63809b28-f407-46ab-a5fe-5c58e7aa2003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs">
+      <UniqueIdentifier>{8f248460-1dc9-400f-8906-97bd073a1c86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libs\imgui">
+      <UniqueIdentifier>{2b571db2-62c7-451b-b309-710cfd8ce369}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="thoughts.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteManager\NoteManager.cpp">
+      <Filter>NoteManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\imgui.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\imgui_demo.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\imgui_draw.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\misc\freetype\imgui_freetype.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\backends\imgui_impl_glfw.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\backends\imgui_impl_opengl3.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\backends\imgui_impl_win32.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\misc\cpp\imgui_stdlib.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\imgui_tables.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Libs\imgui-1.85\imgui_widgets.cpp">
+      <Filter>Libs\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="UI\UI.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="NoteManager\NoteManager.h">
+      <Filter>NoteManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imconfig.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imgui.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\misc\freetype\imgui_freetype.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\backends\imgui_impl_glfw.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\backends\imgui_impl_opengl3.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\backends\imgui_impl_opengl3_loader.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\backends\imgui_impl_osx.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\backends\imgui_impl_win32.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imgui_internal.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\misc\single_file\imgui_single_file.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\misc\cpp\imgui_stdlib.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imstb_rectpack.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imstb_textedit.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\imgui-1.85\imstb_truetype.h">
+      <Filter>Libs\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Libs\json.hpp">
+      <Filter>Libs</Filter>
+    </ClInclude>
+    <ClInclude Include="UI\UI.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
