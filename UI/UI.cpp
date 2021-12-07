@@ -1,4 +1,5 @@
 #include "UI.h"
+#include "fonts.h"
 #include "../NoteManager/NoteManager.h"
 #include "../Libs/imgui-1.85/imgui.h"
 #include "../Libs/imgui-1.85/imgui_internal.h"
@@ -63,7 +64,8 @@ bool CWindow::init() {
     ImGuiIO& io = ImGui::GetIO(); (void)io;
     //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
-
+    io.IniFilename = NULL;
+    
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
     //ImGui::StyleColorsClassic();
@@ -74,8 +76,8 @@ bool CWindow::init() {
     ImFontConfig config;
     config.RasterizerMultiply = 1.1f;
     //config.FontBuilderFlags = ImGuiFreeTypeBuilderFlags::ImGuiFreeTypeBuilderFlags_ForceAutoHint; crashes :/
-    smallFont = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\Lato-Regular.ttf", 18.0f, &config);
-    bigFont = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\Lato-Bold.ttf", 48.0f, &config);
+    smallFont = io.Fonts->AddFontFromMemoryCompressedBase85TTF(reg_compressed_data_base85, 18.f, &config);
+    bigFont = io.Fonts->AddFontFromMemoryCompressedBase85TTF(bold_compressed_data_base85, 48.f, &config);
     ImGuiFreeType::BuildFontAtlas(io.Fonts);
     return true;
     // Load Fonts
@@ -93,6 +95,9 @@ bool CWindow::init() {
     //ImFont* font = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ArialUni.ttf", 18.0f, NULL, io.Fonts->GetGlyphRangesJapanese());
     //IM_ASSERT(font != NULL);
 }
+std::string selected = "NA";
+char titlebuf[46];
+std::string editorBuf;
 void CWindow::RenderLoop() {
     bool show_demo_window = true;
     bool show_another_window = false;
@@ -140,12 +145,11 @@ void CWindow::RenderLoop() {
 
     glfwDestroyWindow(window);
     glfwTerminate();
+    if (selected != "NA")
+        CNoteMgr::Get().UpdateNote(CNote(currentNote, selected));
     CNoteMgr::Get().SaveToDisk();
 }
-std::string selected = "NA";
 
-char titlebuf[46];
-std::string editorBuf;
 void CWindow::drawSidebar() {
     ImGui::SetNextWindowSize({ 256.f , (float)display_h - 32 });
     ImGui::SetNextWindowPos({ 16.f,16.f });

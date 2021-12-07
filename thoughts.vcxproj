@@ -182,6 +182,7 @@
     <ClInclude Include="Libs\imgui-1.85\misc\single_file\imgui_single_file.h" />
     <ClInclude Include="Libs\json.hpp" />
     <ClInclude Include="NoteManager\NoteManager.h" />
+    <ClInclude Include="UI\fonts.h" />
     <ClInclude Include="UI\UI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
